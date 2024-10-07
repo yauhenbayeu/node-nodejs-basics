@@ -10,19 +10,19 @@ const rename = async () => {
 
   fs.access(oldFile, fs.constants.F_OK, (err) => {
     if (err) {
-      throw new Error("1 - FS operation failed");
+      throw new Error("FS operation failed");
     }
   });
 
   fs.access(newFile, fs.constants.F_OK, (err) => {
     if (!err) {
-      throw new Error("2 - FS operation failed");
+      throw new Error("FS operation failed");
     }
   });
 
   fs.rename(oldFile, newFile, (err) => {
     if (err) {
-      throw new Error("3 - FS operation failed");
+      throw new Error("FS operation failed");
     }
   });
 };
